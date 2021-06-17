@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <div class="statsContainer" id="statsModule">
+        <div id="stats-template" >
+            <h2>Stats:</h2>
+            <strong class="item">people: {{people}}</strong>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <hr /> 
+
+    <div id="peopleModule1">
+        <h1>People List 1</h1>
+        <input placeholder="name" type="text">
+        <button id="addPerson">Add Person</button>
+        <ul id="people" class="container">
+            <script id="people-template" type="text/template">
+                {{#people}}
+                    <li class="item">
+                        <span>{{.}}</span>
+                        <i class="del">X</i>
+                    </li>
+                {{/people}}
+            </script>
+        </ul>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js"></script>
+    <script src="scripts/modular.js"></script>
+</body>
+
